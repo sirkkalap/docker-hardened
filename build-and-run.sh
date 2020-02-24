@@ -7,8 +7,6 @@ set -e
     cd "${BASEDIR}/app"
     ./gradlew --no-daemon build
 )
-cp app/build/libs/rest-service-0.0.1-SNAPSHOT.jar docker/awesome.jar
 
-cd docker
 docker build . --tag awesome:latest
-docker run --user $(id -u):$(id -g) -p 127.0.0.1:8080:8080 awesome:latest
+docker run --name awesome-service --user $(id -u):$(id -g) -p 127.0.0.1:8080:8080 awesome:latest
