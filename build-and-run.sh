@@ -3,8 +3,10 @@
 BASEDIR=$(cd $(dirname $0); /bin/pwd)
 set -e
 
-cd "${BASEDIR}"
-app/gradlew build
+(
+    cd "${BASEDIR}/app"
+    ./gradlew --no-daemon build
+)
 cp app/build/libs/rest-service-0.0.1-SNAPSHOT.jar docker/awesome.jar
 
 cd docker
