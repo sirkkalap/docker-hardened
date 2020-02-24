@@ -1,5 +1,5 @@
 # docker-hardened
-A small excercise on making Docker use more safe
+A small excercise on making Docker use more safe. Please use issue tracker for reporting issues and requesting features.
 
 ```
 ./build-and-run.sh
