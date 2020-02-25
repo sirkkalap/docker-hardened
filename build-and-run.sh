@@ -9,6 +9,4 @@ set -e
 )
 
 docker build . --tag awesome:latest
-docker stop awesome-service || true
-docker rm awesome-service || true
-docker run --name awesome-service --user $(id -u):$(id -g) -p 127.0.0.1:8080:8080 awesome:latest
+docker run --name awesome-service --rm --user $(id -u):$(id -g) -p 127.0.0.1:8080:8080 awesome:latest
