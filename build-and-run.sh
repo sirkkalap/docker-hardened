@@ -8,5 +8,5 @@ set -e
     ./gradlew --no-daemon build
 )
 
-docker build . --tag awesome:latest
+docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) . --tag awesome:latest
 docker run --name awesome-service --rm --user $(id -u):$(id -g) -p 127.0.0.1:8080:8080 awesome:latest
