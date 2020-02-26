@@ -15,4 +15,4 @@ To clean up run
 ./clean.sh
 ```
 
-See also: https://intra.solita.fi/display/Dev/Docker#Docker-HardeningDocker 
+See also: intra Docker#Docker-HardeningDocker 
